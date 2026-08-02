@@ -8,6 +8,17 @@ export const enlacesNavegacion = [
   { etiqueta: 'Ubicación', destino: '/contacto' },
 ]
 
+export const marca = {
+  nombre: 'BodyStrong',
+  eslogan: 'Empieza donde estás. Nosotros te acompañamos.',
+  descripcion:
+    'BodyStrong es más que máquinas: es la gente que te saluda por tu nombre, coaches que conocen tu historia y un espacio donde ser principiante se celebra. Vívelo una semana sin pagar nada.',
+  cta: {
+    principal: 'Empieza mi semana gratis',
+    secundario: 'Ver clases',
+  },
+}
+
 export const estadisticasInicio = [
   { valor: '2.500+', descripcion: 'personas entrenan con nosotros' },
   { valor: '12', descripcion: 'clases distintas cada semana' },
@@ -43,6 +54,12 @@ export const clases = [
     nombre: 'Fuerza & musculación',
     descripcion:
       'Máquinas guiadas y zona libre, con coaches que te enseñan a empezar con buen pie y sin miedo.',
+    objetivo:
+      'Ganar fuerza y masa muscular con una técnica segura desde el primer día.',
+    nivel: 'Todos los niveles',
+    duracion: '45–75 min',
+    horarios: ['Lun · 18:00', 'Mié · 19:30', 'Sáb · 10:00'],
+    instructor: 'Laura',
     etiquetas: ['45–75 min', 'Todos los niveles'],
     imagen: imagen('photo-1534438327276-14e5300c3a48', 800),
   },
@@ -50,6 +67,12 @@ export const clases = [
     nombre: 'Funcional',
     descripcion:
       'Sesiones dinámicas para moverte mejor en el día a día. Nada de ejercicios raros: sudor, risas y buena energía.',
+    objetivo:
+      'Mejorar tu movilidad, tu equilibrio y tu energía para el día a día.',
+    nivel: 'Principiantes bienvenidos',
+    duracion: '45 min',
+    horarios: ['Mar · 9:00', 'Jue · 20:00', 'Sáb · 11:30'],
+    instructor: 'Carlos',
     etiquetas: ['45 min', 'Principiantes bienvenidos'],
     imagen: imagen('photo-1517836357463-d25dfeac3438', 800),
   },
@@ -57,6 +80,12 @@ export const clases = [
     nombre: 'Yoga & movilidad',
     descripcion:
       'Respira, estira y escucha a tu cuerpo. Perfecta para complementar tu entrenamiento o como tu clase favorita de la semana.',
+    objetivo:
+      'Estirar, respirar y recuperar tu cuerpo sin presión y con constancia.',
+    nivel: 'Relajado',
+    duracion: '60 min',
+    horarios: ['Mar · 18:30', 'Jue · 12:30', 'Dom · 10:00'],
+    instructor: 'Marta',
     etiquetas: ['60 min', 'Relajado'],
     imagen: imagen('photo-1508805909537-d26d9e2a76f5', 800),
   },
@@ -64,6 +93,11 @@ export const clases = [
     nombre: 'Ciclo indoor',
     descripcion:
       'Pedalea en grupo con música que te lleva. Luz baja, ritmo alto y una buena energía que engancha.',
+    objetivo: 'Quemar calorías en grupo, al ritmo que tú marques.',
+    nivel: 'Intensidad a tu medida',
+    duracion: '45 min',
+    horarios: ['Lun · 20:00', 'Mié · 9:30', 'Vie · 19:00'],
+    instructor: 'David',
     etiquetas: ['45 min', 'Intensidad a tu medida'],
     imagen: imagen('photo-1541625602330-2277a4c46182', 800),
   },
@@ -71,6 +105,11 @@ export const clases = [
     nombre: 'HIIT',
     descripcion:
       'Rondas cortas e intensas con descansos generosos. Resultados visibles en solo 30 minutos.',
+    objetivo: 'Resultados visibles en sesiones cortas e intensas.',
+    nivel: 'Para sacudir la semana',
+    duracion: '30 min',
+    horarios: ['Mar · 19:00', 'Jue · 8:30', 'Vie · 18:00'],
+    instructor: 'Nuria',
     etiquetas: ['30 min', 'Para sacudir la semana'],
     imagen: imagen('photo-1571019614242-c5c5dee9f50b', 800),
   },
@@ -78,6 +117,12 @@ export const clases = [
     nombre: 'Boxeo & saco',
     descripcion:
       'Descarga el estrés, gana confianza y mejora tu coordinación. Guantes incluidos, cero contacto.',
+    objetivo:
+      'Descargar el estrés, ganar confianza y mejorar tu coordinación.',
+    nivel: 'Sin contacto',
+    duracion: '50 min',
+    horarios: ['Lun · 19:30', 'Mié · 18:00', 'Sáb · 12:00'],
+    instructor: 'Raúl',
     etiquetas: ['50 min', 'Sin contacto'],
     imagen: imagen('photo-1583454110551-21f2fa2afe61', 800),
   },
@@ -96,6 +141,7 @@ export const planes = [
       'Sin permanencia',
     ],
     llamado: 'Empieza con Flex',
+    promocion: 'Primera clase de iniciación gratis',
     destacado: false,
   },
   {
@@ -111,6 +157,7 @@ export const planes = [
       'Sin permanencia',
     ],
     llamado: 'Empieza con Total',
+    promocion: 'Un invitado gratis cada mes',
     destacado: true,
   },
   {
@@ -126,6 +173,7 @@ export const planes = [
       'Sin permanencia',
     ],
     llamado: 'Pide tu prueba',
+    promocion: 'Primer mes con un 20 % de descuento',
     destacado: false,
   },
 ]
@@ -206,3 +254,23 @@ export const horario = [
   { dias: 'Sábados', horas: '9:00 – 21:00' },
   { dias: 'Domingos y festivos', horas: '9:00 – 14:00' },
 ]
+
+export const redes = [
+  { nombre: 'Instagram', destino: 'https://instagram.com', icono: 'instagram' },
+  { nombre: 'TikTok', destino: 'https://tiktok.com', icono: 'tiktok' },
+  { nombre: 'YouTube', destino: 'https://youtube.com', icono: 'youtube' },
+  { nombre: 'Facebook', destino: 'https://facebook.com', icono: 'facebook' },
+]
+
+export const contacto = {
+  direccion: {
+    calle: 'Calle del Entreno, 12',
+    zona: 'Centro',
+    nota: 'A 3 minutos del metro y de varias paradas de autobús',
+  },
+  telefono: '+34 910 123 456',
+  telefonoHref: 'tel:+34910123456',
+  correo: 'hola@bodystrong.es',
+  correoHref: 'mailto:hola@bodystrong.es',
+  whatsapp: '+34 610 123 456',
+}

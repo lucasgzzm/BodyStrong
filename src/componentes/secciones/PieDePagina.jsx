@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Logotipo from '../ui/Logotipo'
-import { enlacesNavegacion, horario } from '../../datos/contenido'
-
-const redes = [
-  { nombre: 'Instagram', destino: 'https://instagram.com', icono: 'instagram' },
-  { nombre: 'TikTok', destino: 'https://tiktok.com', icono: 'tiktok' },
-  { nombre: 'YouTube', destino: 'https://youtube.com', icono: 'youtube' },
-  { nombre: 'Facebook', destino: 'https://facebook.com', icono: 'facebook' },
-]
+import { enlacesNavegacion, horario, redes } from '../../datos/contenido'
 
 export default function PieDePagina() {
   return (

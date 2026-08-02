@@ -68,6 +68,9 @@ export default function Planes({ cabecera = true }) {
                 ) : null}
                 <h3>{plan.nombre}</h3>
                 <p className="tarjeta-plan__eslogan">{plan.eslogan}</p>
+                {plan.promocion ? (
+                  <p className="tarjeta-plan__promocion">{plan.promocion}</p>
+                ) : null}
 
                 <p className="tarjeta-plan__precio">
                   <span className="tarjeta-plan__moneda">€</span>
@@ -109,6 +112,24 @@ export default function Planes({ cabecera = true }) {
               {garantia}
             </li>
           ))}
+        </Aparecer>
+
+        <Aparecer className="planes__comparativa" retraso={120}>
+          <h3 className="planes__comparativa-titulo">¿Cómo se comparan?</h3>
+          <ul className="planes__comparativa-lista">
+            <li>
+              <strong>Flex</strong> — para empezar a tu ritmo y entrenar a tu
+              aire.
+            </li>
+            <li>
+              <strong>Total</strong> — si quieres clases ilimitadas, sauna y
+              plan de entrenamiento.
+            </li>
+            <li>
+              <strong>Sin límites</strong> — si quieres un coach que te
+              acompañe todo el año.
+            </li>
+          </ul>
         </Aparecer>
 
         <Aparecer className="nota-planes">

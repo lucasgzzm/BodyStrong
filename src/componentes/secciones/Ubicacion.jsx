@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
-import { horario } from '../../datos/contenido'
+import { horario, redes } from '../../datos/contenido'
 
 export default function Ubicacion({ cabecera = true }) {
   return (
@@ -74,6 +74,60 @@ export default function Ubicacion({ cabecera = true }) {
               </p>
               <p className="ubicacion-atenuada">Respondemos en menos de 24 h</p>
             </div>
+          </div>
+
+          <div className="bloque-ubicacion">
+            <span className="bloque-ubicacion__icono">
+              <Icono nombre="corazon" tamano={22} />
+            </span>
+            <div>
+              <h3>Síguenos</h3>
+              <ul className="bloque-ubicacion__redes">
+                {redes.map((red) => (
+                  <li key={red.nombre}>
+                    <a
+                      href={red.destino}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={red.nombre}
+                    >
+                      <Icono nombre={red.icono} tamano={18} />
+                      {red.nombre}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="formulario-contacto">
+            <h3>Escríbenos</h3>
+            <p className="ubicacion-atenuada">
+              Déjanos tu mensaje y te respondemos en menos de 24 h.
+            </p>
+            <form onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="text"
+                placeholder="Tu nombre"
+                aria-label="Tu nombre"
+                required
+              />
+              <input
+                type="email"
+                placeholder="tu@email.com"
+                aria-label="Tu correo electrónico"
+                required
+              />
+              <textarea
+                placeholder="Cuéntanos qué necesitas…"
+                aria-label="Tu mensaje"
+                rows={3}
+                required
+              />
+              <button type="submit" className="boton boton--primario">
+                Enviar mensaje
+              </button>
+            </form>
           </div>
 
           <Link to="/planes" className="boton boton--primario">
