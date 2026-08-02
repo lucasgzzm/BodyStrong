@@ -287,9 +287,7 @@ ol {
   position: fixed;
   inset: 0 0 auto;
   z-index: 60;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #ffffff;
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s var(--curva), box-shadow 0.3s var(--curva);
 }
