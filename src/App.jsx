@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Encabezado from './componentes/secciones/Encabezado'
 import PieDePagina from './componentes/secciones/PieDePagina'
+import BotonInstagram from './componentes/ui/BotonInstagram'
 import InicioPagina from './paginas/InicioPagina'
 import ClasesPagina from './paginas/ClasesPagina'
 import PlanesPagina from './paginas/PlanesPagina'
@@ -29,6 +30,7 @@ function App() {
         </Routes>
       </main>
       <PieDePagina />
+      <BotonInstagram />
     </>
   )
 }
