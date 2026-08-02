@@ -426,9 +426,10 @@ ol {
 .panel-movil {
   position: fixed;
   top: calc(var(--altura-encabezado) + 0.75rem);
-  left: 1rem;
-  right: 1rem;
+  left: 50%;
+  width: 50vw;
   height: 50vh;
+  margin-left: -25vw;
   z-index: 59;
   background: #ffffff;
   border: 1px solid var(--linea);
