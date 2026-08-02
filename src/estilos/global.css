@@ -1973,6 +1973,10 @@ ol {
     height: 72px;
   }
 
+  .encabezado__acciones .boton--pequeno {
+    display: none;
+  }
+
   .logotipo img {
     height: 56px;
   }
