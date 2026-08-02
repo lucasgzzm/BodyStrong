@@ -317,7 +317,7 @@ ol {
 }
 
 .logotipo img {
-  height: 72px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   box-sizing: content-box;
@@ -2130,7 +2130,7 @@ ol {
   }
 
   .logotipo img {
-    height: 56px;
+    height: 44px;
   }
 
   .inicio__texto h1 {
