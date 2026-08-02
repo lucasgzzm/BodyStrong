@@ -425,17 +425,19 @@ ol {
 
 .panel-movil {
   position: fixed;
-  top: var(--altura-encabezado);
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: calc(var(--altura-encabezado) + 0.75rem);
+  left: 1rem;
+  right: 1rem;
+  height: 50vh;
   z-index: 59;
   background: #ffffff;
-  border-top: 1px solid var(--linea);
-  padding: 1.5rem 24px 2.5rem;
+  border: 1px solid var(--linea);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+  padding: 1.5rem 24px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
