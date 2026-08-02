@@ -95,7 +95,7 @@ ol {
 }
 
 .contenedor {
-  width: min(var(--contenedor), 100% - 14rem);
+  width: min(var(--contenedor), 100% - clamp(2.5rem, 8vw, 14rem));
   margin-inline: auto;
 }
 
@@ -1853,10 +1853,6 @@ ol {
 }
 
 @media (max-width: 1020px) {
-  .contenedor {
-    width: min(var(--contenedor), 100% - 48px);
-  }
-
   .navegacion {
     display: none;
   }
