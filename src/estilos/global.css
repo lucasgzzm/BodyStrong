@@ -497,9 +497,12 @@ ol {
   color: var(--rojo);
 }
 
+.panel-movil nav li {
+  opacity: 1;
+}
+
 .panel-movil--abierto nav li {
-  opacity: 0;
-  animation: entrada-menu 0.45s var(--curva) forwards;
+  animation: entrada-menu 0.45s var(--curva) backwards;
 }
 
 .panel-movil--abierto nav li:nth-child(1) {
