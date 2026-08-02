@@ -429,6 +429,7 @@ ol {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 59;
   background: #ffffff;
   border-top: 1px solid var(--linea);
   padding: 1.5rem 24px 2.5rem;
