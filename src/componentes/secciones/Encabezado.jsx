@@ -22,44 +22,46 @@ export default function Encabezado() {
   }, [abierto])
 
   return (
-    <header className={`encabezado ${desplazado ? 'encabezado--desplazado' : ''}`}>
-      <div className="encabezado__interior">
-        <Logotipo />
+    <>
+      <header className={`encabezado ${desplazado ? 'encabezado--desplazado' : ''}`}>
+        <div className="encabezado__interior">
+          <Logotipo />
 
-        <nav className="navegacion" aria-label="Principal">
-          <ul>
-            {enlacesNavegacion.map((enlace) => (
-              <li key={enlace.destino}>
-                <NavLink
-                  to={enlace.destino}
-                  className={({ isActive }) =>
-                    `navegacion__enlace${isActive ? ' navegacion__enlace--activo' : ''}`
-                  }
-                >
-                  {enlace.etiqueta}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+          <nav className="navegacion" aria-label="Principal">
+            <ul>
+              {enlacesNavegacion.map((enlace) => (
+                <li key={enlace.destino}>
+                  <NavLink
+                    to={enlace.destino}
+                    className={({ isActive }) =>
+                      `navegacion__enlace${isActive ? ' navegacion__enlace--activo' : ''}`
+                    }
+                  >
+                    {enlace.etiqueta}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="encabezado__acciones">
-          <Link to="/planes" className="boton boton--primario boton--pequeno">
-            Empieza hoy
-          </Link>
-          <button
-            type="button"
-            className={`alternador-menu ${abierto ? 'alternador-menu--abierto' : ''}`}
-            aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
-            aria-expanded={abierto}
-            onClick={() => setAbierto((v) => !v)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+          <div className="encabezado__acciones">
+            <Link to="/planes" className="boton boton--primario boton--pequeno">
+              Empieza hoy
+            </Link>
+            <button
+              type="button"
+              className={`alternador-menu ${abierto ? 'alternador-menu--abierto' : ''}`}
+              aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
+              aria-expanded={abierto}
+              onClick={() => setAbierto((v) => !v)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       <div className={`panel-movil ${abierto ? 'panel-movil--abierto' : ''}`}>
         <nav aria-label="Móvil">
@@ -87,6 +89,6 @@ export default function Encabezado() {
           Empieza hoy · semana gratis
         </Link>
       </div>
-    </header>
+    </>
   )
 }
