@@ -370,6 +370,7 @@ ol {
 }
 
 .encabezado__acciones {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -424,8 +425,8 @@ ol {
 }
 
 .panel-movil {
-  position: fixed;
-  top: calc(var(--altura-encabezado) + 0.75rem);
+  position: absolute;
+  top: calc(100% + 0.75rem);
   right: 0;
   width: 50vw;
   height: 50vh;

@@ -59,36 +59,36 @@ export default function Encabezado() {
               <span />
               <span />
             </button>
+
+            <div className={`panel-movil ${abierto ? 'panel-movil--abierto' : ''}`}>
+              <nav aria-label="Móvil">
+                <ul>
+                  {enlacesNavegacion.map((enlace) => (
+                    <li key={enlace.destino}>
+                      <NavLink
+                        to={enlace.destino}
+                        onClick={() => setAbierto(false)}
+                        className={({ isActive }) =>
+                          `panel-movil__enlace${isActive ? ' panel-movil__enlace--activo' : ''}`
+                        }
+                      >
+                        {enlace.etiqueta}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <Link
+                to="/planes"
+                className="boton boton--primario"
+                onClick={() => setAbierto(false)}
+              >
+                Empieza hoy · semana gratis
+              </Link>
+            </div>
           </div>
         </div>
       </header>
-
-      <div className={`panel-movil ${abierto ? 'panel-movil--abierto' : ''}`}>
-        <nav aria-label="Móvil">
-          <ul>
-            {enlacesNavegacion.map((enlace) => (
-              <li key={enlace.destino}>
-                <NavLink
-                  to={enlace.destino}
-                  onClick={() => setAbierto(false)}
-                  className={({ isActive }) =>
-                    `panel-movil__enlace${isActive ? ' panel-movil__enlace--activo' : ''}`
-                  }
-                >
-                  {enlace.etiqueta}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <Link
-          to="/planes"
-          className="boton boton--primario"
-          onClick={() => setAbierto(false)}
-        >
-          Empieza hoy · semana gratis
-        </Link>
-      </div>
     </>
   )
 }
