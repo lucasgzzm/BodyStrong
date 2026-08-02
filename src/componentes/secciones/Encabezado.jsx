@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logotipo from '../ui/Logotipo'
+import PerfilDesplegable from '../ui/PerfilDesplegable'
 import { enlacesNavegacion } from '../../datos/contenido'
 
 export default function Encabezado() {
@@ -45,6 +46,7 @@ export default function Encabezado() {
           </nav>
 
           <div className="encabezado__acciones">
+            <PerfilDesplegable />
             <Link to="/planes" className="boton boton--primario boton--pequeno">
               Empieza hoy
             </Link>
