@@ -434,8 +434,6 @@ ol {
   border: 1px solid var(--linea);
   border-radius: var(--radio-pequeno);
   box-shadow: var(--sombra-elevada);
-  outline: 2px solid var(--rojo-100);
-  outline-offset: 5px;
   padding: 0.6rem;
   display: flex;
   flex-direction: column;
