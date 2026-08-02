@@ -383,10 +383,24 @@ ol {
   width: 44px;
   height: 44px;
   padding: 10px;
-  border: none;
+  border: 1px solid var(--linea);
   border-radius: 999px;
-  background: transparent;
+  background: var(--superficie);
   cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.alternador-menu:hover {
+  border-color: var(--rojo);
+}
+
+.alternador-menu--abierto {
+  border-color: var(--rojo);
+  background: var(--rojo);
+}
+
+.alternador-menu--abierto span {
+  background: var(--blanco);
 }
 
 .alternador-menu span {
@@ -416,17 +430,18 @@ ol {
   right: 0;
   bottom: 0;
   background: #ffffff;
+  border-top: 1px solid var(--linea);
   padding: 1.5rem 24px 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   transition:
-    opacity 0.3s var(--curva),
-    transform 0.3s var(--curva),
-    visibility 0.3s;
+    opacity 0.35s var(--curva),
+    transform 0.35s var(--curva),
+    visibility 0.35s;
   overflow-y: auto;
 }
 
@@ -442,19 +457,81 @@ ol {
   gap: 0.4rem;
 }
 
-.panel-movil nav a {
-  display: block;
-  padding: 0.8rem 0.5rem;
+.panel-movil__enlace {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 0.4rem;
   font-family: var(--fuente-titulos);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--tinta);
   text-decoration: none;
   border-bottom: 1px solid var(--linea);
+  transition: color 0.2s ease, padding-left 0.25s var(--curva);
+}
+
+.panel-movil__enlace::after {
+  content: '→';
+  font-size: 1.15rem;
+  color: var(--apagado);
+  transition: color 0.2s ease, transform 0.25s var(--curva);
+}
+
+.panel-movil__enlace:hover {
+  color: var(--rojo-600);
+  padding-left: 0.8rem;
+}
+
+.panel-movil__enlace:hover::after {
+  color: var(--rojo);
+  transform: translateX(4px);
+}
+
+.panel-movil__enlace--activo {
+  color: var(--rojo-600);
+}
+
+.panel-movil__enlace--activo::after {
+  color: var(--rojo);
+}
+
+.panel-movil--abierto nav li {
+  opacity: 0;
+  animation: entrada-menu 0.45s var(--curva) forwards;
+}
+
+.panel-movil--abierto nav li:nth-child(1) {
+  animation-delay: 0.06s;
+}
+
+.panel-movil--abierto nav li:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.panel-movil--abierto nav li:nth-child(3) {
+  animation-delay: 0.18s;
+}
+
+.panel-movil--abierto nav li:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+@keyframes entrada-menu {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .panel-movil .boton {
-  align-self: flex-start;
+  margin-top: auto;
+  width: 100%;
 }
 
 .inicio {

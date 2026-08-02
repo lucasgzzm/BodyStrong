@@ -66,9 +66,15 @@ export default function Encabezado() {
           <ul>
             {enlacesNavegacion.map((enlace) => (
               <li key={enlace.destino}>
-                <Link to={enlace.destino} onClick={() => setAbierto(false)}>
+                <NavLink
+                  to={enlace.destino}
+                  onClick={() => setAbierto(false)}
+                  className={({ isActive }) =>
+                    `panel-movil__enlace${isActive ? ' panel-movil__enlace--activo' : ''}`
+                  }
+                >
                   {enlace.etiqueta}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
