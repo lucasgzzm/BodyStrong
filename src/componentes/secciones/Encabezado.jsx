@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logotipo from '../ui/Logotipo'
 import { enlacesNavegacion } from '../../datos/contenido'
@@ -6,6 +6,7 @@ import { enlacesNavegacion } from '../../datos/contenido'
 export default function Encabezado() {
   const [desplazado, setDesplazado] = useState(false)
   const [abierto, setAbierto] = useState(false)
+  const accionesRef = useRef(null)
 
   useEffect(() => {
     const alDesplazar = () => setDesplazado(window.scrollY > 10)
@@ -13,6 +14,28 @@ export default function Encabezado() {
     window.addEventListener('scroll', alDesplazar, { passive: true })
     return () => window.removeEventListener('scroll', alDesplazar)
   }, [])
+
+  useEffect(() => {
+    if (!abierto) return
+
+    const alClicFuera = (evento) => {
+      if (accionesRef.current && !accionesRef.current.contains(evento.target)) {
+        setAbierto(false)
+      }
+    }
+    const alEscapar = (evento) => {
+      if (evento.key === 'Escape') setAbierto(false)
+    }
+
+    document.addEventListener('mousedown', alClicFuera)
+    document.addEventListener('touchstart', alClicFuera, { passive: true })
+    document.addEventListener('keydown', alEscapar)
+    return () => {
+      document.removeEventListener('mousedown', alClicFuera)
+      document.removeEventListener('touchstart', alClicFuera)
+      document.removeEventListener('keydown', alEscapar)
+    }
+  }, [abierto])
 
   useEffect(() => {
     document.body.style.overflow = abierto ? 'hidden' : ''
@@ -44,7 +67,7 @@ export default function Encabezado() {
             </ul>
           </nav>
 
-          <div className="encabezado__acciones">
+          <div className="encabezado__acciones" ref={accionesRef}>
             <Link to="/planes" className="boton boton--primario boton--pequeno">
               Empieza hoy
             </Link>
