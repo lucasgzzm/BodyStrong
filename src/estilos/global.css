@@ -999,6 +999,91 @@ main > * + * {
   max-width: 46ch;
 }
 
+.convenios__cuadricula {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.convenio {
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-elevada);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.convenio__encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.convenio__icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radio-pequeno);
+  background: var(--rojo-100);
+  color: var(--rojo-600);
+}
+
+.convenio__beneficio {
+  font-family: var(--fuente-titulos);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tinta);
+  background: var(--amarillo);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  white-space: nowrap;
+}
+
+.convenio h3 {
+  font-size: 1.25rem;
+}
+
+.convenio > p {
+  color: var(--apagado);
+  font-size: 0.95rem;
+}
+
+.convenio__puntos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.convenio__puntos li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: var(--tinta);
+}
+
+.convenio__puntos svg {
+  color: var(--rojo-600);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .convenios__cuadricula {
+    grid-template-columns: 1fr;
+  }
+}
+
 .clases__cabecera,
 .planes__cabecera,
 .galeria__cabecera,

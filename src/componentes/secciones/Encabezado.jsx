@@ -48,6 +48,16 @@ function IconoContacto() {
   )
 }
 
+function IconoConvenios() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  )
+}
+
 function IconoCuenta() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
@@ -61,6 +71,7 @@ const ICONOS_NAVEGACION = {
   '/': <IconoInicio />,
   '/clases': <IconoClases />,
   '/planes': <IconoPlanes />,
+  '/convenios': <IconoConvenios />,
   '/contacto': <IconoContacto />,
   '/cuenta': <IconoCuenta />,
 }

@@ -7,6 +7,7 @@ import InicioPagina from './paginas/InicioPagina'
 import ClasesPagina from './paginas/ClasesPagina'
 import PlanesPagina from './paginas/PlanesPagina'
 import ContactoPagina from './paginas/ContactoPagina'
+import ConveniosPagina from './paginas/ConveniosPagina'
 import CuentaPagina from './paginas/CuentaPagina'
 
 function AlCambiarDePagina() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/clases" element={<ClasesPagina />} />
           <Route path="/planes" element={<PlanesPagina />} />
           <Route path="/contacto" element={<ContactoPagina />} />
+          <Route path="/convenios" element={<ConveniosPagina />} />
           <Route path="/cuenta" element={<CuentaPagina />} />
         </Routes>
       </main>

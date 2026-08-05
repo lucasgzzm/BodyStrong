@@ -5,6 +5,7 @@ export const enlacesNavegacion = [
   { etiqueta: 'Inicio', destino: '/' },
   { etiqueta: 'Clases', destino: '/clases' },
   { etiqueta: 'Planes', destino: '/planes' },
+  { etiqueta: 'Convenios', destino: '/convenios' },
   { etiqueta: 'Ubicación', destino: '/contacto' },
   { etiqueta: 'Mi cuenta', destino: '/cuenta' },
 ]
@@ -176,6 +177,57 @@ export const planes = [
     llamado: 'Pide tu prueba',
     promocion: 'Primer mes con un 20 % de descuento',
     destacado: false,
+  },
+]
+
+export const convenios = [
+  {
+    nombre: 'Empresas y equipos',
+    detalle:
+      'Descuentos reales para tus colaboradores y planes a medida para tu empresa.',
+    beneficio: '15 % de descuento',
+    puntos: [
+      'Tarifa preferente para tu equipo',
+      'Pago centralizado por convenio',
+      'Informe mensual de uso',
+    ],
+    icono: 'usuarios',
+  },
+  {
+    nombre: 'Estudiantes',
+    detalle:
+      'Mantente activo mientras estudias con una cuota pensada para tu bolsillo.',
+    beneficio: '20 % de descuento',
+    puntos: [
+      'Solo con credencial vigente',
+      'Acceso a todas las zonas',
+      'Clases grupales incluidas',
+    ],
+    icono: 'chispa',
+  },
+  {
+    nombre: 'Salud y bienestar',
+    detalle:
+      'Trabajamos con isapres, cajas de compensación y mutuales para acercar el entrenamiento a más personas.',
+    beneficio: 'Hasta 25 % de descuento',
+    puntos: [
+      'Reembolso a través de tu entidad',
+      'Programa de rehabilitación activa',
+      'Evaluación física inicial gratis',
+    ],
+    icono: 'escudoCorazon',
+  },
+  {
+    nombre: 'Comunidad y clubes',
+    detalle:
+      'Clubes deportivos, juntas vecinales y comunidades con acceso preferente y tarifas grupales.',
+    beneficio: '10 % de descuento',
+    puntos: [
+      'Tarifa grupal desde 5 personas',
+      'Eventos y talleres exclusivos',
+      'Salas para tus actividades',
+    ],
+    icono: 'corazon',
   },
 ]
 
