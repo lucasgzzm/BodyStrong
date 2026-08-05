@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { QRCodeSVG } from 'qrcode.react'
+import { LogIn, Mail, Lock, User } from 'lucide-react'
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
 import {
   registrarUsuario,
@@ -68,6 +69,14 @@ function FormularioAutenticacion() {
       }
       setSesion(resultado.usuario)
     } else {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formulario.email)) {
+        setError('Escribe un correo válido.')
+        return
+      }
+      if (!formulario.clave) {
+        setError('Escribe tu contraseña.')
+        return
+      }
       const resultado = iniciarSesion(formulario.email, formulario.clave)
       if (!resultado.ok) {
         setError(resultado.error)
@@ -104,13 +113,25 @@ function FormularioAutenticacion() {
             </button>
           </div>
 
+          <span className="cuenta-icono">
+            <LogIn className="cuenta-icono__svg" />
+          </span>
+          <h2 className="cuenta-titulo">
+            {modo === 'entrar' ? 'Entra con tu correo' : 'Crea tu cuenta'}
+          </h2>
+          <p className="cuenta-subtitulo">
+            {modo === 'entrar'
+              ? 'Accede para gestionar tu mensualidad y generar tu QR de entrada diario.'
+              : 'Regístrate y activa tu mensualidad en menos de un minuto.'}
+          </p>
+
           <form className="cuenta-formulario" onSubmit={alEnviar}>
             {modo === 'registro' ? (
               <label className="cuenta-campo">
-                <span>Tu nombre</span>
+                <User className="cuenta-campo__icono" />
                 <input
                   type="text"
-                  placeholder="Ej: Camila"
+                  placeholder="Tu nombre"
                   value={formulario.nombre}
                   onChange={(e) =>
                     setFormulario({ ...formulario, nombre: e.target.value })
@@ -120,10 +141,10 @@ function FormularioAutenticacion() {
             ) : null}
 
             <label className="cuenta-campo">
-              <span>Correo electrónico</span>
+              <Mail className="cuenta-campo__icono" />
               <input
                 type="email"
-                placeholder="tu@email.com"
+                placeholder="Correo electrónico"
                 value={formulario.email}
                 onChange={(e) =>
                   setFormulario({ ...formulario, email: e.target.value })
@@ -132,10 +153,10 @@ function FormularioAutenticacion() {
             </label>
 
             <label className="cuenta-campo">
-              <span>Contraseña</span>
+              <Lock className="cuenta-campo__icono" />
               <input
                 type="password"
-                placeholder="••••••••"
+                placeholder="Contraseña"
                 value={formulario.clave}
                 onChange={(e) =>
                   setFormulario({ ...formulario, clave: e.target.value })
@@ -143,12 +164,45 @@ function FormularioAutenticacion() {
               />
             </label>
 
-            {error ? <p className="cuenta-error">{error}</p> : null}
+            <div className="cuenta-formulario__pie">
+              {error ? <p className="cuenta-error">{error}</p> : <span aria-hidden="true" />}
+              <Link to="/contacto" className="cuenta-olvidada">
+                ¿Olvidaste tu contraseña?
+              </Link>
+            </div>
 
-            <button type="submit" className="boton boton--primario">
+            <button type="submit" className="cuenta-enviar">
               {modo === 'entrar' ? 'Entrar' : 'Crear mi cuenta'}
             </button>
           </form>
+
+          <div className="cuenta-divisor">
+            <span>O entra con</span>
+          </div>
+
+          <div className="cuenta-redes">
+            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Google">
+              <img
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                alt=""
+                className="cuenta-redes__imagen"
+              />
+            </button>
+            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Facebook">
+              <img
+                src="https://www.svgrepo.com/show/448224/facebook.svg"
+                alt=""
+                className="cuenta-redes__imagen"
+              />
+            </button>
+            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Apple">
+              <img
+                src="https://www.svgrepo.com/show/511330/apple-173.svg"
+                alt=""
+                className="cuenta-redes__imagen"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </section>
