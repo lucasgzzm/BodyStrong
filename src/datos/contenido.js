@@ -132,7 +132,7 @@ export const planes = [
   {
     nombre: 'Flex',
     eslogan: 'Para empezar a tu ritmo',
-    precioMensual: 26.9,
+    precioMensual: 24990,
     beneficios: [
       'Acceso libre al gimnasio',
       'Vestidores y taquillas',
@@ -147,7 +147,7 @@ export const planes = [
   {
     nombre: 'Total',
     eslogan: 'El favorito de la comunidad',
-    precioMensual: 36.9,
+    precioMensual: 34990,
     beneficios: [
       'Todo lo de Flex',
       'Clases ilimitadas',
@@ -163,7 +163,7 @@ export const planes = [
   {
     nombre: 'Sin límites',
     eslogan: 'Acompañamiento 360º',
-    precioMensual: 46.9,
+    precioMensual: 44990,
     beneficios: [
       'Todo lo de Total',
       'Coach asignado que te sigue',

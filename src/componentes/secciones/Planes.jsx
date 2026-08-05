@@ -5,7 +5,9 @@ import Aparecer from '../ui/Aparecer'
 import { planes } from '../../datos/contenido'
 
 function formatearPrecio(valor) {
-  return valor.toFixed(2).replace('.', ',').replace(/,00$/, '')
+  return Math.round(valor)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 }
 
 const garantias = ['Sin permanencia', 'Cancela cuando quieras', 'Primera clase gratis']
@@ -73,7 +75,7 @@ export default function Planes({ cabecera = true }) {
                 ) : null}
 
                 <p className="tarjeta-plan__precio">
-                  <span className="tarjeta-plan__moneda">€</span>
+                  <span className="tarjeta-plan__moneda">$</span>
                   {formatearPrecio(precio)}
                   <span className="tarjeta-plan__periodo">/mes</span>
                 </p>

@@ -3,7 +3,9 @@ import Aparecer from '../ui/Aparecer'
 import { planes } from '../../datos/contenido'
 
 function formatearPrecio(valor) {
-  return valor.toFixed(2).replace('.', ',').replace(/,00$/, '')
+  return Math.round(valor)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 }
 
 export default function ResumenPlanes() {
@@ -24,7 +26,7 @@ export default function ResumenPlanes() {
             <div className="resumen-planes__plan" key={plan.nombre}>
               <span>{plan.nombre}</span>
               <strong>
-                €{formatearPrecio(plan.precioMensual)}
+                ${formatearPrecio(plan.precioMensual)}
                 <small>/mes</small>
               </strong>
             </div>
