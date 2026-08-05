@@ -318,11 +318,12 @@ ol {
 }
 
 .logotipo img {
-  height: 72px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   box-sizing: content-box;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  filter: drop-shadow(0 4px 10px rgba(25, 20, 16, 0.22));
 }
 
 .navegacion {
@@ -2087,7 +2088,7 @@ ol {
   }
 
   .logotipo img {
-    height: 64px;
+    height: 68px;
     padding: 0.25rem;
   }
 
