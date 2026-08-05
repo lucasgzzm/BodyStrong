@@ -57,6 +57,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -2127,6 +2128,17 @@ ol {
   }
 }
 
+@media (max-width: 768px) {
+  .inicio__stats-cuadricula {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .conmutador-planes {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --altura-encabezado: 72px;
@@ -2219,6 +2231,36 @@ ol {
 
   .info-ubicacion {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio__texto h1 {
+    font-size: 2rem;
+  }
+
+  .clase-destacada {
+    min-height: 440px;
+  }
+
+  .clase-destacada__contenido {
+    padding: 1.4rem;
+  }
+
+  .clase-fila__lado {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .conmutador-planes {
+    font-size: 0.88rem;
+    gap: 0.75rem;
+  }
+
+  .info-ubicacion__acciones .boton,
+  .formulario-contacto .boton {
+    width: 100%;
   }
 }
 
@@ -2408,7 +2450,7 @@ ol {
 .formulario-contacto textarea {
   width: 100%;
   font-family: var(--fuente-texto);
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--tinta);
   background: var(--blanco);
   border: 1px solid var(--linea);
