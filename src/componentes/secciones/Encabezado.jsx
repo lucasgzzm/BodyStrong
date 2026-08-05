@@ -135,6 +135,9 @@ export default function Encabezado() {
                       `navegacion__enlace${isActive ? ' navegacion__enlace--activo' : ''}`
                     }
                   >
+                    <span className="navegacion__enlace-icono">
+                      {ICONOS_NAVEGACION[enlace.destino]}
+                    </span>
                     {enlace.etiqueta}
                   </NavLink>
                 </li>

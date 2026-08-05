@@ -354,12 +354,26 @@ main > * + * {
 
 .navegacion__enlace {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.93rem;
   font-weight: 500;
   color: var(--texto);
   text-decoration: none;
   padding-block: 0.4rem;
   transition: color 0.2s ease;
+}
+
+.navegacion__enlace-icono {
+  display: inline-flex;
+  color: var(--apagado);
+  transition: color 0.2s ease;
+}
+
+.navegacion__enlace:hover .navegacion__enlace-icono,
+.navegacion__enlace--activo .navegacion__enlace-icono {
+  color: var(--rojo);
 }
 
 .navegacion__enlace::after {
