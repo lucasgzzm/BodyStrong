@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
@@ -14,6 +15,31 @@ const urlMapa =
 const urlComoLlegar = `https://www.openstreetmap.org/directions?from=&to=${coordenadas.lat}%2C${coordenadas.lon}`
 
 export default function Ubicacion({ cabecera = true }) {
+  const [mapaActivo, setMapaActivo] = useState(false)
+  const mapaRef = useRef(null)
+
+  useEffect(() => {
+    if (!mapaActivo) return
+
+    const alClicFuera = (evento) => {
+      if (mapaRef.current && !mapaRef.current.contains(evento.target)) {
+        setMapaActivo(false)
+      }
+    }
+    const alEscapar = (evento) => {
+      if (evento.key === 'Escape') setMapaActivo(false)
+    }
+
+    document.addEventListener('mousedown', alClicFuera)
+    document.addEventListener('touchstart', alClicFuera, { passive: true })
+    document.addEventListener('keydown', alEscapar)
+    return () => {
+      document.removeEventListener('mousedown', alClicFuera)
+      document.removeEventListener('touchstart', alClicFuera)
+      document.removeEventListener('keydown', alEscapar)
+    }
+  }, [mapaActivo])
+
   return (
     <section id="ubicacion" className="ubicacion">
       <div className="contenedor">
@@ -29,12 +55,27 @@ export default function Ubicacion({ cabecera = true }) {
         ) : null}
 
         <div className="ubicacion__contenido">
-          <div className="ubicacion__mapa">
+          <div
+            ref={mapaRef}
+            className={`ubicacion__mapa${mapaActivo ? ' ubicacion__mapa--activo' : ''}`}
+          >
             <iframe
               title="Mapa de BodyStrong en Madrid"
               src={urlMapa}
               loading="lazy"
             />
+            {!mapaActivo && (
+              <button
+                type="button"
+                className="ubicacion__mapa-activar"
+                onClick={() => setMapaActivo(true)}
+              >
+                <span className="ubicacion__mapa-etiqueta">
+                  <Icono nombre="ubicacion" tamano={16} />
+                  Activar mapa
+                </span>
+              </button>
+            )}
           </div>
 
           <Aparecer className="info-ubicacion">
