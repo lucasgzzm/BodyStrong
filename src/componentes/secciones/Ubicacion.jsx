@@ -29,6 +29,14 @@ export default function Ubicacion({ cabecera = true }) {
         ) : null}
 
         <div className="ubicacion__contenido">
+          <div className="ubicacion__mapa">
+            <iframe
+              title="Mapa de BodyStrong en Madrid"
+              src={urlMapa}
+              loading="lazy"
+            />
+          </div>
+
           <Aparecer className="info-ubicacion">
             <div className="bloque-ubicacion">
               <span className="bloque-ubicacion__icono">
@@ -147,14 +155,6 @@ export default function Ubicacion({ cabecera = true }) {
               </a>
             </div>
           </Aparecer>
-
-          <div className="ubicacion__mapa">
-            <iframe
-              title="Mapa de BodyStrong en Madrid"
-              src={urlMapa}
-              loading="lazy"
-            />
-          </div>
         </div>
       </div>
     </section>

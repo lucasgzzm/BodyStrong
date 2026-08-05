@@ -1663,17 +1663,17 @@ main > * + * {
 }
 
 .ubicacion__contenido {
-  display: grid;
-  grid-template-columns: minmax(320px, 430px) 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  align-items: stretch;
 }
 
 .ubicacion__mapa {
-  height: clamp(360px, 45vw, 500px);
+  height: clamp(260px, 38vw, 420px);
   border-radius: var(--radio);
   overflow: hidden;
-  box-shadow: var(--sombra-tarjeta);
+  box-shadow: var(--sombra-elevada);
+  border: 1px solid var(--linea);
 }
 
 .ubicacion__mapa iframe {
@@ -2058,10 +2058,6 @@ main > * + * {
 
   .galeria__masonica {
     columns: 2;
-  }
-
-  .ubicacion__contenido {
-    grid-template-columns: 1fr;
   }
 
   .ubicacion__mapa {
