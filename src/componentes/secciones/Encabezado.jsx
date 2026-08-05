@@ -48,34 +48,12 @@ function IconoContacto() {
   )
 }
 
-function IconoCorona() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
-      <path d="M5 21h14" />
-    </svg>
-  )
-}
-
-function IconoCerrarSesion() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-      <polyline points="16 17 21 12 16 7" />
-      <line x1="21" x2="9" y1="12" y2="12" />
-    </svg>
-  )
-}
-
 const ICONOS_NAVEGACION = {
   '/': <IconoInicio />,
   '/clases': <IconoClases />,
   '/planes': <IconoPlanes />,
   '/contacto': <IconoContacto />,
 }
-
-const AVATAR =
-  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80'
 
 export default function Encabezado() {
   const [desplazado, setDesplazado] = useState(false)
@@ -108,6 +86,15 @@ export default function Encabezado() {
       document.removeEventListener('mousedown', alClicFuera)
       document.removeEventListener('touchstart', alClicFuera)
       document.removeEventListener('keydown', alEscapar)
+    }
+  }, [abierto])
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-abierto', abierto)
+    document.body.style.overflow = abierto ? 'hidden' : ''
+    return () => {
+      document.body.classList.remove('menu-abierto')
+      document.body.style.overflow = ''
     }
   }, [abierto])
 
@@ -145,25 +132,31 @@ export default function Encabezado() {
               aria-expanded={abierto}
               onClick={() => setAbierto((v) => !v)}
             >
-              <span />
-              <span />
-              <span />
+              <svg
+                className="alternador-menu__icono"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                aria-hidden="true"
+              >
+                {abierto ? (
+                  <>
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </>
+                ) : (
+                  <>
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                  </>
+                )}
+              </svg>
             </button>
 
             <div className={`panel-movil ${abierto ? 'panel-movil--abierto' : ''}`}>
-              <div className="panel-movil__perfil">
-                <img className="panel-movil__avatar" src={AVATAR} alt="Usuario" />
-                <div className="panel-movil__usuario">
-                  <span className="panel-movil__correo">cliente@bodystrong.com</span>
-                  <span className="panel-movil__plan">
-                    <IconoCorona />
-                    Plan PRO
-                  </span>
-                </div>
-              </div>
-
-              <span className="panel-movil__separador" />
-
               <nav aria-label="Móvil">
                 <ul>
                   {enlacesNavegacion.map((enlace) => (
@@ -185,16 +178,13 @@ export default function Encabezado() {
                 </ul>
               </nav>
 
-              <span className="panel-movil__separador" />
-
-              <button
-                type="button"
-                className="panel-movil__cerrar"
+              <Link
+                to="/planes"
+                className="panel-movil__cta"
                 onClick={() => setAbierto(false)}
               >
-                <IconoCerrarSesion />
-                Cerrar sesión
-              </button>
+                Empieza hoy
+              </Link>
             </div>
           </div>
         </div>

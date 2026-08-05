@@ -377,17 +377,20 @@ ol {
 
 .alternador-menu {
   display: none;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 5px;
   width: 44px;
   height: 44px;
-  padding: 10px;
+  padding: 0;
   border: 1px solid var(--linea);
   border-radius: 999px;
   background: var(--superficie);
+  color: var(--tinta);
   cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .alternador-menu:hover {
@@ -397,30 +400,13 @@ ol {
 .alternador-menu--abierto {
   border-color: var(--rojo);
   background: var(--rojo);
+  color: var(--blanco);
 }
 
-.alternador-menu--abierto span {
-  background: var(--blanco);
-}
-
-.alternador-menu span {
+.alternador-menu__icono {
   display: block;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--tinta);
-  transition: transform 0.3s var(--curva), opacity 0.2s ease;
-}
-
-.alternador-menu--abierto span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.alternador-menu--abierto span:nth-child(2) {
-  opacity: 0;
-}
-
-.alternador-menu--abierto span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  width: 22px;
+  height: 22px;
 }
 
 .panel-movil {
@@ -451,57 +437,6 @@ ol {
   opacity: 1;
   visibility: visible;
   transform: none;
-}
-
-.panel-movil__perfil {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.55rem 0.8rem 0.7rem;
-}
-
-.panel-movil__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.panel-movil__usuario {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  line-height: 1.25;
-  min-width: 0;
-}
-
-.panel-movil__correo {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--tinta);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.panel-movil__plan {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.72rem;
-  color: var(--apagado);
-}
-
-.panel-movil__plan svg {
-  color: #d97706;
-}
-
-.panel-movil__separador {
-  display: block;
-  height: 1px;
-  margin: 0.25rem 0.4rem;
-  background: linear-gradient(to right, transparent, var(--linea), transparent);
 }
 
 .panel-movil nav ul {
@@ -584,30 +519,24 @@ ol {
   }
 }
 
-.panel-movil__cerrar {
+.panel-movil__cta {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  width: 100%;
-  padding: 0.7rem 0.8rem;
-  border: none;
+  justify-content: center;
+  margin-top: 0.4rem;
+  padding: 0.75rem 0.8rem;
   border-radius: 0.8rem;
-  background: var(--rojo-100);
-  color: var(--rojo-600);
-  font-family: var(--fuente-texto);
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
-.panel-movil__cerrar svg {
-  width: 1.05em;
-  height: 1.05em;
-}
-
-.panel-movil__cerrar:hover {
-  background: #f6caca;
+.panel-movil__cta:hover {
+  background: var(--rojo-600);
 }
 
 .inicio {
@@ -627,6 +556,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .inicio__velo {
@@ -2025,14 +1955,6 @@ ol {
 }
 
 @media (max-width: 1020px) {
-  .navegacion {
-    display: none;
-  }
-
-  .alternador-menu {
-    display: flex;
-  }
-
   .resumen-cabecera {
     flex-direction: column;
     align-items: flex-start;
@@ -2129,6 +2051,18 @@ ol {
 }
 
 @media (max-width: 768px) {
+  .navegacion {
+    display: none;
+  }
+
+  .alternador-menu {
+    display: flex;
+  }
+
+  .encabezado__acciones .boton--pequeno {
+    display: none;
+  }
+
   .inicio__stats-cuadricula {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2150,10 +2084,6 @@ ol {
 
   .encabezado__interior {
     height: 72px;
-  }
-
-  .encabezado__acciones .boton--pequeno {
-    display: none;
   }
 
   .logotipo img {
@@ -2309,6 +2239,10 @@ ol {
 
 .boton-instagram:hover {
   transform: translateY(-4px) scale(1.06);
+}
+
+.menu-abierto .boton-instagram {
+  display: none;
 }
 
 @media (max-width: 640px) {
