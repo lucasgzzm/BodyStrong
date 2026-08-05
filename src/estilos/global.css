@@ -15,7 +15,7 @@
   --linea-oscura: rgba(255, 255, 255, 0.1);
   --blanco: #fffdf9;
 
-  --altura-encabezado: 88px;
+  --altura-encabezado: 96px;
 
   --fuente-titulos: 'Montserrat', system-ui, sans-serif;
   --fuente-texto: 'Montserrat', system-ui, sans-serif;
@@ -48,7 +48,9 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color: var(--texto);
-  background: var(--crema);
+  background-color: var(--crema);
+  background-image: radial-gradient(rgba(25, 20, 16, 0.05) 1px, transparent 1.5px);
+  background-size: 26px 26px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -131,7 +133,13 @@ ol {
 }
 
 .seccion {
-  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  margin-inline: clamp(0.6rem, 2.5vw, 2.5rem);
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: clamp(18px, 2.5vw, 26px);
+  box-shadow: var(--sombra-elevada);
+  overflow: hidden;
 }
 
 .seccion--tinta {
@@ -140,13 +148,22 @@ ol {
 
 .seccion--oscura {
   background: var(--tinta);
+  border-color: var(--linea-oscura);
+}
+
+main > * + * {
+  margin-top: clamp(1.25rem, 3vw, 2.5rem);
 }
 
 .cabecera-pagina {
-  background: var(--crema);
-  padding-top: calc(var(--altura-encabezado) + clamp(2.5rem, 6vw, 4.5rem));
+  margin-top: calc(var(--altura-encabezado) + clamp(0.6rem, 1.5vw, 1.25rem));
+  margin-inline: clamp(0.6rem, 2.5vw, 2.5rem);
+  padding-top: clamp(2.5rem, 6vw, 4rem);
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
-  border-bottom: 1px solid var(--linea);
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: clamp(18px, 2.5vw, 26px);
+  box-shadow: var(--sombra-elevada);
 }
 
 .migas {
@@ -542,8 +559,11 @@ ol {
 
 .inicio {
   position: relative;
-  padding-top: var(--altura-encabezado);
+  margin-top: calc(var(--altura-encabezado) + clamp(0.6rem, 1.5vw, 1.25rem));
+  margin-inline: clamp(0.6rem, 2.5vw, 2.5rem);
   overflow: hidden;
+  border-radius: clamp(18px, 2.5vw, 26px);
+  box-shadow: var(--sombra-elevada);
   color: var(--blanco);
 }
 
@@ -711,10 +731,14 @@ ol {
 }
 
 .cinta {
+  margin-inline: clamp(0.6rem, 2.5vw, 2.5rem);
   background: var(--tinta);
+  border: 1px solid var(--linea-oscura);
   color: var(--blanco);
   overflow: hidden;
   padding-block: 1.05rem;
+  border-radius: clamp(14px, 2vw, 22px);
+  box-shadow: var(--sombra-elevada);
 }
 
 .cinta__pista {
@@ -1621,7 +1645,12 @@ ol {
 }
 
 .ubicacion {
+  margin-inline: clamp(0.6rem, 2.5vw, 2.5rem);
   padding: clamp(3rem, 6vw, 5rem) 0;
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: clamp(18px, 2.5vw, 26px);
+  box-shadow: var(--sombra-elevada);
 }
 
 .ubicacion__cabecera {
@@ -1802,7 +1831,12 @@ ol {
 }
 
 .pie-pagina {
+  margin: clamp(1.25rem, 3vw, 2.5rem);
+  overflow: hidden;
   background: var(--tinta);
+  border: 1px solid var(--linea-oscura);
+  border-radius: clamp(18px, 2.5vw, 26px);
+  box-shadow: var(--sombra-elevada);
   color: #b7ab9c;
 }
 
@@ -2076,11 +2110,28 @@ ol {
 
 @media (max-width: 640px) {
   :root {
-    --altura-encabezado: 72px;
+    --altura-encabezado: 80px;
   }
 
   html {
-    scroll-padding-top: 82px;
+    scroll-padding-top: 88px;
+  }
+
+  .seccion,
+  .cinta,
+  .cabecera-pagina,
+  .inicio,
+  .ubicacion,
+  .pie-pagina {
+    margin-inline: 0.5rem;
+  }
+
+  .pie-pagina {
+    margin-block: 1.25rem 0.5rem;
+  }
+
+  .seccion {
+    padding-block: 2.5rem;
   }
 
   .encabezado__interior {
