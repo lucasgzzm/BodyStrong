@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
 import { planes } from '../../datos/contenido'
+import { seleccionarPlanPendiente } from '../../datos/almacen'
 
 function formatearPrecio(valor) {
   return Math.round(valor)
@@ -95,10 +96,11 @@ export default function Planes({ cabecera = true }) {
                 </ul>
 
                 <Link
-                  to="/contacto"
+                  to="/cuenta"
                   className={`boton ${
                     plan.destacado ? 'boton--primario' : 'boton--fantasma-claro'
                   }`}
+                  onClick={() => seleccionarPlanPendiente(plan)}
                 >
                   {plan.llamado}
                 </Link>

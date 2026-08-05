@@ -7,6 +7,7 @@ import InicioPagina from './paginas/InicioPagina'
 import ClasesPagina from './paginas/ClasesPagina'
 import PlanesPagina from './paginas/PlanesPagina'
 import ContactoPagina from './paginas/ContactoPagina'
+import CuentaPagina from './paginas/CuentaPagina'
 
 function AlCambiarDePagina() {
   const { pathname } = useLocation()
@@ -27,6 +28,7 @@ function App() {
           <Route path="/clases" element={<ClasesPagina />} />
           <Route path="/planes" element={<PlanesPagina />} />
           <Route path="/contacto" element={<ContactoPagina />} />
+          <Route path="/cuenta" element={<CuentaPagina />} />
         </Routes>
       </main>
       <PieDePagina />

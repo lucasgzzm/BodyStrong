@@ -6,6 +6,7 @@ export const enlacesNavegacion = [
   { etiqueta: 'Clases', destino: '/clases' },
   { etiqueta: 'Planes', destino: '/planes' },
   { etiqueta: 'Ubicación', destino: '/contacto' },
+  { etiqueta: 'Mi cuenta', destino: '/cuenta' },
 ]
 
 export const marca = {

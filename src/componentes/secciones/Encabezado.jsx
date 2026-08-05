@@ -48,11 +48,21 @@ function IconoContacto() {
   )
 }
 
+function IconoCuenta() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21c0-3.314 3.582-6 8-6s8 2.686 8 6" />
+    </svg>
+  )
+}
+
 const ICONOS_NAVEGACION = {
   '/': <IconoInicio />,
   '/clases': <IconoClases />,
   '/planes': <IconoPlanes />,
   '/contacto': <IconoContacto />,
+  '/cuenta': <IconoCuenta />,
 }
 
 export default function Encabezado() {
