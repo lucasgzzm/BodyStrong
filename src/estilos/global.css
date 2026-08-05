@@ -301,7 +301,7 @@ ol {
 .encabezado__interior {
   width: 100%;
   padding-inline: 24px;
-  height: 88px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -318,7 +318,7 @@ ol {
 }
 
 .logotipo img {
-  height: 80px;
+  height: 88px;
   width: auto;
   object-fit: contain;
   box-sizing: content-box;
@@ -2084,11 +2084,11 @@ ol {
   }
 
   .encabezado__interior {
-    height: 72px;
+    height: 80px;
   }
 
   .logotipo img {
-    height: 68px;
+    height: 72px;
     padding: 0.25rem;
   }
 
