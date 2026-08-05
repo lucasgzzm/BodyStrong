@@ -78,7 +78,7 @@ function FormularioAutenticacion() {
   }
 
   return (
-    <section className="seccion seccion--tinta">
+    <section className="seccion seccion--cuenta-fondo">
       <div className="contenedor">
         <div className="cuenta-ventana">
           <div className="cuenta-tabs">
@@ -190,7 +190,7 @@ function SesionIniciada({ nombre, onSalir }) {
   }
 
   return (
-    <section className="seccion seccion--tinta">
+    <section className="seccion seccion--cuenta-fondo">
       <div className="contenedor">
         <div className="cuenta-bienvenida">
           <h2>Hola, {nombre} 👋</h2>
@@ -322,7 +322,7 @@ function SesionIniciada({ nombre, onSalir }) {
         </div>
 
         <div className="cuenta-salir">
-          <button type="button" className="boton boton--fantasma" onClick={onSalir}>
+          <button type="button" className="boton boton--fantasma-claro" onClick={onSalir}>
             Cerrar sesión
           </button>
         </div>

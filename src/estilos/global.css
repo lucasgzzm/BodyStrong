@@ -2693,6 +2693,24 @@ main > * + * {
   padding: 2rem;
 }
 
+.seccion--cuenta-fondo {
+  background-color: var(--tinta);
+  background-image:
+    linear-gradient(rgba(25, 20, 16, 0.78), rgba(25, 20, 16, 0.84)),
+    url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.seccion--cuenta-fondo .cuenta-bienvenida h2 {
+  color: var(--blanco);
+  text-shadow: 0 2px 12px rgba(25, 20, 16, 0.5);
+}
+
+.seccion--cuenta-fondo .cuenta-salir {
+  margin-top: 1.75rem;
+}
+
 .cuenta-tabs {
   display: flex;
   gap: 0.5rem;
