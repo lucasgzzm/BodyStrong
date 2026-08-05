@@ -2686,9 +2686,9 @@ main > * + * {
 .cuenta-ventana {
   max-width: 420px;
   margin-inline: auto;
-  background: linear-gradient(to bottom, rgba(240, 249, 255, 0.55), var(--blanco));
-  border: 1px solid #dbeafe;
-  border-radius: 24px;
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
   box-shadow: var(--sombra-elevada);
   padding: 2rem;
   display: flex;
@@ -2757,10 +2757,9 @@ main > * + * {
   justify-content: center;
   width: 56px;
   height: 56px;
-  border-radius: 16px;
-  background: var(--blanco);
-  box-shadow: 0 8px 20px rgba(25, 20, 16, 0.1);
-  color: var(--tinta);
+  border-radius: var(--radio-pequeno);
+  background: var(--rojo-100);
+  color: var(--rojo-600);
   margin-bottom: 1.1rem;
 }
 
@@ -2771,14 +2770,15 @@ main > * + * {
 
 .cuenta-titulo {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .cuenta-subtitulo {
-  font-size: 0.875rem;
-  color: var(--apagado);
+  font-size: 0.9rem;
+  color: var(--texto);
   text-align: center;
   max-width: 32ch;
   margin-bottom: 1.75rem;
@@ -2791,7 +2791,7 @@ main > * + * {
 
 .cuenta-campo__icono {
   position: absolute;
-  left: 0.8rem;
+  left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
@@ -2802,21 +2802,20 @@ main > * + * {
 
 .cuenta-campo input {
   width: 100%;
-  padding: 0.6rem 0.9rem 0.6rem 2.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #f9fafb;
+  padding: 0.7rem 0.9rem 0.7rem 2.5rem;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-pequeno);
+  background: var(--blanco);
   font-family: var(--fuente-texto);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--tinta);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: border-color 0.25s var(--curva), box-shadow 0.25s var(--curva);
 }
 
 .cuenta-campo input:focus {
   outline: none;
-  border-color: #93c5fd;
-  box-shadow: 0 0 0 2px #dbeafe;
-  background: var(--blanco);
+  border-color: var(--rojo);
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.12);
 }
 
 .cuenta-formulario__pie {
@@ -2849,22 +2848,30 @@ main > * + * {
 .cuenta-enviar {
   width: 100%;
   margin-top: 0.5rem;
-  border: none;
-  border-radius: 12px;
-  padding: 0.7rem 1rem;
-  background: linear-gradient(to bottom, #4b5563, #111827);
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 1rem 1.7rem;
+  background: var(--rojo);
   color: var(--blanco);
   font-family: var(--fuente-titulos);
   font-weight: 600;
   font-size: 0.95rem;
+  line-height: 1;
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(25, 20, 16, 0.25);
-  transition: filter 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--sombra-flama);
+  transition:
+    transform 0.25s var(--curva),
+    box-shadow 0.25s var(--curva),
+    background-color 0.25s var(--curva);
 }
 
 .cuenta-enviar:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
+  background: var(--rojo-600);
+  transform: translateY(-2px);
+}
+
+.cuenta-enviar:active {
+  transform: translateY(1px) scale(0.99);
 }
 
 .cuenta-divisor {
@@ -2879,7 +2886,7 @@ main > * + * {
 .cuenta-divisor::after {
   content: '';
   flex: 1;
-  border-top: 1px dashed #e5e7eb;
+  border-top: 1px dashed var(--linea);
 }
 
 .cuenta-divisor span {
@@ -2900,12 +2907,15 @@ main > * + * {
   align-items: center;
   justify-content: center;
   height: 48px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  border: 1px solid var(--linea);
+  border-radius: 10px;
   background: var(--blanco);
   color: var(--tinta);
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.25s var(--curva),
+    transform 0.25s var(--curva),
+    border-color 0.25s var(--curva);
 }
 
 .cuenta-redes__boton svg {
@@ -2919,7 +2929,8 @@ main > * + * {
 }
 
 .cuenta-redes__boton:hover {
-  background: #f3f4f6;
+  background: var(--crema-2);
+  border-color: var(--linea);
   transform: translateY(-2px);
 }
 
