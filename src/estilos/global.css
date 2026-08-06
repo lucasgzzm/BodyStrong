@@ -1829,6 +1829,8 @@ main > * + * {
   box-shadow: var(--sombra-elevada);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 1.5rem;
 }
 
@@ -1854,7 +1856,10 @@ main > * + * {
 
 .bloque-ubicacion {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.7rem;
 }
 
 .bloque-ubicacion__icono {
@@ -1907,7 +1912,7 @@ main > * + * {
 
 .horario-ubicacion li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   font-size: 0.95rem;
 }
@@ -2520,6 +2525,7 @@ main > * + * {
 .bloque-ubicacion__redes {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -2540,6 +2546,11 @@ main > * + * {
 .bloque-ubicacion__redes a:hover {
   background: var(--rojo);
   color: var(--blanco);
+}
+
+.formulario-contacto {
+  width: 100%;
+  max-width: 440px;
 }
 
 .formulario-contacto h3 {
