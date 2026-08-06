@@ -334,7 +334,7 @@ main > * + * {
 }
 
 .logotipo img {
-  height: 84px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   box-sizing: content-box;
@@ -2273,7 +2273,7 @@ main > * + * {
   }
 
   .logotipo img {
-    height: 68px;
+    height: 80px;
     padding: 0.25rem;
   }
 
