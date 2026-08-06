@@ -12,58 +12,52 @@ const ESTILO_ICONO = {
 
 function IconoInicio() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-      <polyline points="9 22 9 12 15 12 15 22" />
+    <svg viewBox="0 0 24 24" fill="currentColor" style={ESTILO_ICONO} aria-hidden="true">
+      <path d="M12 3l9 8h-2.6v9h-4.9v-5.4h-3V20H5.6v-9H3z" />
     </svg>
   )
 }
 
 function IconoClases() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="M14.4 14.4 9.6 9.6" />
-      <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z" />
-      <path d="m21.5 21.5-1.4-1.4" />
-      <path d="M3.9 3.9 2.5 2.5" />
-      <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" style={ESTILO_ICONO} aria-hidden="true">
+      <rect x="3.5" y="5.5" width="3.5" height="13" rx="1.75" />
+      <rect x="6.8" y="7.5" width="2.4" height="9" rx="1.2" />
+      <rect x="8.6" y="9.5" width="6.8" height="5" rx="2.5" />
+      <rect x="14.8" y="7.5" width="2.4" height="9" rx="1.2" />
+      <rect x="17" y="5.5" width="3.5" height="13" rx="1.75" />
     </svg>
   )
 }
 
 function IconoPlanes() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
-      <path d="M5 21h14" />
+    <svg viewBox="0 0 24 24" fill="currentColor" style={ESTILO_ICONO} aria-hidden="true">
+      <path d="M6 3h12l5 7-11 12L1 10z" />
     </svg>
   )
 }
 
 function IconoContacto() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-      <circle cx="12" cy="10" r="3" />
+    <svg viewBox="0 0 24 24" fill="currentColor" style={ESTILO_ICONO} aria-hidden="true">
+      <path d="M12 2a7.6 7.6 0 0 0-7.6 7.6c0 5.1 7.6 12.4 7.6 12.4s7.6-7.3 7.6-12.4A7.6 7.6 0 0 0 12 2zm0 10.4a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z" />
     </svg>
   )
 }
 
 function IconoConvenios() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
+    <svg viewBox="0 0 24 24" fill="currentColor" fillRule="evenodd" style={ESTILO_ICONO} aria-hidden="true">
+      <path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 4.5A6.5 6.5 0 1 1 5.5 12 6.5 6.5 0 0 1 12 5.5zm0 4A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5z" />
     </svg>
   )
 }
 
 function IconoCuenta() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={ESTILO_ICONO} aria-hidden="true">
-      <circle cx="12" cy="8" r="4" />
-      <path d="M4 21c0-3.314 3.582-6 8-6s8 2.686 8 6" />
+    <svg viewBox="0 0 24 24" fill="currentColor" style={ESTILO_ICONO} aria-hidden="true">
+      <path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 13c-4.6 0-8 2.9-8 6.5V21h16v-1.5c0-3.6-3.4-6.5-8-6.5z" />
     </svg>
   )
 }
