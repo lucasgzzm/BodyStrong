@@ -15,7 +15,7 @@
   --linea-oscura: rgba(255, 255, 255, 0.1);
   --blanco: #fffdf9;
 
-  --altura-encabezado: 96px;
+  --altura-encabezado: 76px;
 
   --fuente-titulos: 'Montserrat', system-ui, sans-serif;
   --fuente-texto: 'Montserrat', system-ui, sans-serif;
@@ -38,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 88px;
   overflow-x: hidden;
 }
 
@@ -317,7 +317,7 @@ main > * + * {
 .encabezado__interior {
   width: 100%;
   padding-inline: 24px;
-  height: 96px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -334,7 +334,7 @@ main > * + * {
 }
 
 .logotipo img {
-  height: 88px;
+  height: 62px;
   width: auto;
   object-fit: contain;
   box-sizing: content-box;
@@ -2244,11 +2244,11 @@ main > * + * {
 
 @media (max-width: 640px) {
   :root {
-    --altura-encabezado: 80px;
+    --altura-encabezado: 64px;
   }
 
   html {
-    scroll-padding-top: 88px;
+    scroll-padding-top: 72px;
   }
 
   .seccion,
@@ -2269,11 +2269,11 @@ main > * + * {
   }
 
   .encabezado__interior {
-    height: 80px;
+    height: 64px;
   }
 
   .logotipo img {
-    height: 72px;
+    height: 50px;
     padding: 0.25rem;
   }
 
