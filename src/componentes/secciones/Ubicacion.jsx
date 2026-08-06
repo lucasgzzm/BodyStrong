@@ -14,6 +14,9 @@ const urlMapa =
 
 const urlComoLlegar = `https://www.openstreetmap.org/directions?from=&to=${coordenadas.lat}%2C${coordenadas.lon}`
 
+const imagenGimnasio =
+  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80'
+
 export default function Ubicacion({ cabecera = true }) {
   const [mapaActivo, setMapaActivo] = useState(false)
   const mapaRef = useRef(null)
@@ -81,7 +84,8 @@ export default function Ubicacion({ cabecera = true }) {
             )}
           </div>
 
-          <Aparecer className="info-ubicacion">
+          <div className="ubicacion__inferior">
+            <Aparecer className="info-ubicacion">
             <div className="bloque-ubicacion">
               <span className="bloque-ubicacion__icono">
                 <Icono nombre="ubicacion" tamano={22} />
@@ -196,7 +200,16 @@ export default function Ubicacion({ cabecera = true }) {
                 Cómo llegar
               </PressDepth>
             </div>
-          </Aparecer>
+            </Aparecer>
+
+            <figure className="ubicacion__imagen">
+              <img
+                src={imagenGimnasio}
+                alt="Interior del gimnasio BodyStrong"
+                loading="lazy"
+              />
+            </figure>
+          </div>
         </div>
       </div>
     </section>

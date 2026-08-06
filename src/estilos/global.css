@@ -1766,6 +1766,28 @@ main > * + * {
   gap: 2rem;
 }
 
+.ubicacion__inferior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.ubicacion__imagen {
+  margin: 0;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra-elevada);
+}
+
+.ubicacion__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .ubicacion__mapa {
   position: relative;
   height: clamp(260px, 38vw, 420px);
@@ -2205,6 +2227,14 @@ main > * + * {
 
   .ubicacion__mapa {
     height: 360px;
+  }
+
+  .ubicacion__inferior {
+    grid-template-columns: 1fr;
+  }
+
+  .ubicacion__imagen img {
+    height: 320px;
   }
 
   .info-ubicacion {
