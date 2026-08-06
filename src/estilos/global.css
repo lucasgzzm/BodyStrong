@@ -48,9 +48,7 @@ body {
   font-size: 16px;
   line-height: 1.65;
   color: var(--texto);
-  background-color: var(--crema);
-  background-image: radial-gradient(rgba(25, 20, 16, 0.05) 1px, transparent 1.5px);
-  background-size: 26px 26px;
+  background-color: #ffffff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -306,13 +304,14 @@ main > * + * {
   inset: 0 0 auto;
   z-index: 60;
   background: #ffffff;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--linea);
+  box-shadow: 0 6px 24px rgba(25, 20, 16, 0.08);
   transition: border-color 0.3s var(--curva), box-shadow 0.3s var(--curva);
 }
 
 .encabezado--desplazado {
   border-bottom-color: var(--linea);
-  box-shadow: 0 8px 30px rgba(25, 20, 16, 0.06);
+  box-shadow: 0 10px 32px rgba(25, 20, 16, 0.1);
 }
 
 .encabezado__interior {
