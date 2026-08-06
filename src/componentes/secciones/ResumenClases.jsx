@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { clases } from '../../datos/contenido'
 
 export default function ResumenClases() {
@@ -15,9 +15,9 @@ export default function ResumenClases() {
               cada semana, todas abiertas a cualquier nivel.
             </p>
           </div>
-          <Link to="/clases" className="boton boton--fantasma">
+          <PressDepth to="/clases" className="boton boton--fantasma">
             Ver todas las clases
-          </Link>
+          </PressDepth>
         </Aparecer>
 
         <div className="resumen-clases">

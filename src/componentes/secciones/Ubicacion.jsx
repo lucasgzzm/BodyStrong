@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { horario, redes, contacto } from '../../datos/contenido'
 
 const coordenadas = {
@@ -70,10 +70,13 @@ export default function Ubicacion({ cabecera = true }) {
                 className="ubicacion__mapa-activar"
                 onClick={() => setMapaActivo(true)}
               >
-                <span className="ubicacion__mapa-etiqueta">
+                <PressDepth
+                  className="ubicacion__mapa-etiqueta"
+                  envClass="press--etiqueta"
+                >
                   <Icono nombre="ubicacion" tamano={16} />
                   Activar mapa
-                </span>
+                </PressDepth>
               </button>
             )}
           </div>
@@ -176,24 +179,22 @@ export default function Ubicacion({ cabecera = true }) {
                   rows={3}
                   required
                 />
-                <button type="submit" className="boton boton--primario">
+                <PressDepth type="submit" className="boton boton--primario">
                   Enviar mensaje
-                </button>
+                </PressDepth>
               </form>
             </div>
 
             <div className="info-ubicacion__acciones">
-              <Link to="/planes" className="boton boton--primario">
+              <PressDepth to="/planes" className="boton boton--primario">
                 Ven a conocernos
-              </Link>
-              <a
+              </PressDepth>
+              <PressDepth
                 href={urlComoLlegar}
-                target="_blank"
-                rel="noreferrer"
                 className="boton boton--fantasma"
               >
                 Cómo llegar
-              </a>
+              </PressDepth>
             </div>
           </Aparecer>
         </div>

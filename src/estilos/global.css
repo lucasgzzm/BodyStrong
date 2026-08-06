@@ -2404,10 +2404,6 @@ main > * + * {
 }
 
 .boton-instagram {
-  position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 58;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2428,14 +2424,8 @@ main > * + * {
   transform: translateY(-4px) scale(1.06);
 }
 
-.menu-abierto .boton-instagram {
-  display: none;
-}
-
 @media (max-width: 640px) {
   .boton-instagram {
-    right: 1rem;
-    bottom: 1rem;
     width: 52px;
     height: 52px;
   }
@@ -2934,6 +2924,14 @@ main > * + * {
   transform: translateY(-2px);
 }
 
+.cuenta-formulario > .press {
+  width: 100%;
+}
+
+.cuenta-redes > .press {
+  flex: 1;
+}
+
 .cuenta-bienvenida {
   margin-bottom: 1.75rem;
 }
@@ -3190,5 +3188,87 @@ main > * + * {
 @media (max-width: 480px) {
   .cuenta-ventana {
     padding: 1.4rem;
+  }
+}
+
+.press {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: opacity 0.2s ease;
+}
+
+.press:disabled {
+  cursor: not-allowed;
+}
+
+.press:disabled .press__cara {
+  opacity: 0.55;
+}
+
+.press:focus-visible .press__cara {
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.45);
+}
+
+.press__base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: rgba(25, 20, 16, 0.24);
+  pointer-events: none;
+}
+
+.press__cara {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  will-change: transform;
+}
+
+.press__brillo {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(28, 25, 23, 0.07);
+}
+
+.press--flotante {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 58;
+  border-radius: 999px;
+}
+
+.press--etiqueta {
+  border-radius: 999px;
+}
+
+.menu-abierto .press--flotante {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .press--flotante {
+    right: 1rem;
+    bottom: 1rem;
   }
 }

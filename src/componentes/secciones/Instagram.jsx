@@ -1,5 +1,6 @@
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { publicacionesInsta } from '../../datos/contenido'
 
 export default function Instagram() {
@@ -15,15 +16,13 @@ export default function Instagram() {
               Etiquétanos y podrías salir en el feed.
             </p>
           </div>
-          <a
+          <PressDepth
             href="https://instagram.com"
-            target="_blank"
-            rel="noreferrer"
             className="boton boton--primario"
           >
             <Icono nombre="instagram" tamano={20} />
             Seguirnos
-          </a>
+          </PressDepth>
         </Aparecer>
       </div>
 

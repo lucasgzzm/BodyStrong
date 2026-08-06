@@ -1,6 +1,6 @@
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
 import Planes from '../componentes/secciones/Planes'
-import { Link } from 'react-router-dom'
+import PressDepth from '../componentes/ui/PressDepth'
 
 export default function PlanesPagina() {
   return (
@@ -23,9 +23,9 @@ export default function PlanesPagina() {
               La primera visita y una clase de prueba son gratis. Pásate cuando
               quieras o escríbenos por WhatsApp.
             </p>
-            <Link to="/contacto" className="boton boton--primario">
+            <PressDepth to="/contacto" className="boton boton--primario">
               Ver ubicación y contacto
-            </Link>
+            </PressDepth>
           </div>
         </div>
       </section>

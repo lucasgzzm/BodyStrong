@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { QRCodeSVG } from 'qrcode.react'
 import { LogIn, Mail, Lock, User } from 'lucide-react'
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
+import PressDepth from '../componentes/ui/PressDepth'
 import {
   registrarUsuario,
   iniciarSesion,
@@ -171,9 +172,9 @@ function FormularioAutenticacion() {
               </Link>
             </div>
 
-            <button type="submit" className="cuenta-enviar">
+            <PressDepth type="submit" className="cuenta-enviar boton boton--primario">
               {modo === 'entrar' ? 'Entrar' : 'Crear mi cuenta'}
-            </button>
+            </PressDepth>
           </form>
 
           <div className="cuenta-divisor">
@@ -181,7 +182,11 @@ function FormularioAutenticacion() {
           </div>
 
           <div className="cuenta-redes">
-            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Gmail">
+            <PressDepth
+              type="button"
+              className="cuenta-redes__boton"
+              aria-label="Entrar con Gmail"
+            >
               <svg
                 className="cuenta-redes__imagen"
                 viewBox="0 0 24 24"
@@ -190,21 +195,29 @@ function FormularioAutenticacion() {
               >
                 <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
               </svg>
-            </button>
-            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Facebook">
+            </PressDepth>
+            <PressDepth
+              type="button"
+              className="cuenta-redes__boton"
+              aria-label="Entrar con Facebook"
+            >
               <img
                 src="https://www.svgrepo.com/show/448224/facebook.svg"
                 alt=""
                 className="cuenta-redes__imagen"
               />
-            </button>
-            <button type="button" className="cuenta-redes__boton" aria-label="Entrar con Apple">
+            </PressDepth>
+            <PressDepth
+              type="button"
+              className="cuenta-redes__boton"
+              aria-label="Entrar con Apple"
+            >
               <img
                 src="https://www.svgrepo.com/show/511330/apple-173.svg"
                 alt=""
                 className="cuenta-redes__imagen"
               />
-            </button>
+            </PressDepth>
           </div>
         </div>
       </div>
@@ -266,21 +279,21 @@ function SesionIniciada({ nombre, onSalir }) {
                     <span>
                       ${formatearPrecio(pendiente.precioMensual)}/mes
                     </span>
-                    <button
+                    <PressDepth
                       type="button"
                       className="boton boton--primario"
                       onClick={alActivarPlan}
                     >
                       Activar mi plan (30 días)
-                    </button>
+                    </PressDepth>
                     <Link to="/planes" className="cuenta-enlace">
                       Elegir otro plan
                     </Link>
                   </div>
                 ) : (
-                  <Link to="/planes" className="boton boton--primario">
+                  <PressDepth to="/planes" className="boton boton--primario">
                     Ver planes
-                  </Link>
+                  </PressDepth>
                 )}
               </div>
             ) : (
@@ -329,13 +342,13 @@ function SesionIniciada({ nombre, onSalir }) {
                   </div>
                 )}
 
-                <button
+                <PressDepth
                   type="button"
                   className="boton boton--fantasma"
                   onClick={alRenovar}
                 >
                   {membresia.vencida ? 'Renovar mi mensualidad' : 'Reiniciar 30 días'}
-                </button>
+                </PressDepth>
               </>
             )}
           </div>
@@ -362,13 +375,13 @@ function SesionIniciada({ nombre, onSalir }) {
                 <div className="cuenta-qr__codigo">
                   <QRCodeSVG value={tokenQr()} size={220} />
                 </div>
-                <button
+                <PressDepth
                   type="button"
                   className="boton boton--primario"
                   onClick={alMarcarEntrada}
                 >
                   Marcar entrada (ya he entrado)
-                </button>
+                </PressDepth>
                 <p className="cuenta-qr__nota">
                   En la vida real lo marca el lector del gimnasio. Aquí lo haces
                   tú para probar: una vez marcado, el QR desaparece hasta mañana.
@@ -379,9 +392,9 @@ function SesionIniciada({ nombre, onSalir }) {
         </div>
 
         <div className="cuenta-salir">
-          <button type="button" className="boton boton--fantasma-claro" onClick={onSalir}>
+          <PressDepth type="button" className="boton boton--fantasma-claro" onClick={onSalir}>
             Cerrar sesión
-          </button>
+          </PressDepth>
         </div>
       </div>
     </section>

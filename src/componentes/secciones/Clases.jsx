@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { clases } from '../../datos/contenido'
 
 const [destacada, ...resto] = clases
@@ -19,9 +20,9 @@ export default function Clases({ cabecera = true }) {
                 convence, prueba otra: encontrar la tuya es parte del plan.
               </p>
             </div>
-            <Link to="/planes" className="boton boton--fantasma">
+            <PressDepth to="/planes" className="boton boton--fantasma">
               Ver todos los horarios
-            </Link>
+            </PressDepth>
           </Aparecer>
         ) : null}
 

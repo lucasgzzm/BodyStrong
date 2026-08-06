@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { razones } from '../../datos/contenido'
 
 const avatares = [
@@ -32,9 +32,9 @@ export default function PorQue() {
           </Aparecer>
 
           <Aparecer retraso={160}>
-            <Link to="/planes" className="boton boton--primario">
+            <PressDepth to="/planes" className="boton boton--primario">
               Quiero empezar
-            </Link>
+            </PressDepth>
           </Aparecer>
         </div>
 

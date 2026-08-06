@@ -1,6 +1,6 @@
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
 import Clases from '../componentes/secciones/Clases'
-import { Link } from 'react-router-dom'
+import PressDepth from '../componentes/ui/PressDepth'
 
 export default function ClasesPagina() {
   return (
@@ -19,12 +19,12 @@ export default function ClasesPagina() {
             <h2 className="h2--oscuro">¿Quieres ver precios claros?</h2>
           </header>
           <div className="enlace-pagina">
-            <Link to="/planes" className="boton boton--amarillo">
+            <PressDepth to="/planes" className="boton boton--amarillo">
               Ver planes y precios
-            </Link>
-            <Link to="/contacto" className="boton boton--fantasma-claro">
+            </PressDepth>
+            <PressDepth to="/contacto" className="boton boton--fantasma-claro">
               Pedir cita en el gimnasio
-            </Link>
+            </PressDepth>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
 import Ubicacion from '../componentes/secciones/Ubicacion'
-import { Link } from 'react-router-dom'
+import PressDepth from '../componentes/ui/PressDepth'
 
 export default function ContactoPagina() {
   return (
@@ -23,9 +23,9 @@ export default function ContactoPagina() {
               Sin permanencia y con tu primer día guiado por un coach. Solo
               tienes que elegir plan.
             </p>
-            <Link to="/planes" className="boton boton--primario">
+            <PressDepth to="/planes" className="boton boton--primario">
               Ver planes y precios
-            </Link>
+            </PressDepth>
           </div>
         </div>
       </section>

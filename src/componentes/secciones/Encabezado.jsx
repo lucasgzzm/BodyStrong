@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Logotipo from '../ui/Logotipo'
+import PressDepth from '../ui/PressDepth'
 import { enlacesNavegacion } from '../../datos/contenido'
 
 const ESTILO_ICONO = {
@@ -146,9 +147,12 @@ export default function Encabezado() {
           </nav>
 
           <div className="encabezado__acciones" ref={accionesRef}>
-            <Link to="/planes" className="boton boton--primario boton--pequeno">
+            <PressDepth
+              to="/planes"
+              className="boton boton--primario boton--pequeno"
+            >
               Empieza hoy
-            </Link>
+            </PressDepth>
             <button
               type="button"
               className={`alternador-menu ${abierto ? 'alternador-menu--abierto' : ''}`}
@@ -202,13 +206,13 @@ export default function Encabezado() {
                 </ul>
               </nav>
 
-              <Link
+              <PressDepth
                 to="/planes"
                 className="panel-movil__cta"
                 onClick={() => setAbierto(false)}
               >
                 Empieza hoy
-              </Link>
+              </PressDepth>
             </div>
           </div>
         </div>

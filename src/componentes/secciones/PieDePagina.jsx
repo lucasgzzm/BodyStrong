@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Logotipo from '../ui/Logotipo'
+import PressDepth from '../ui/PressDepth'
 import { enlacesNavegacion, horario, redes } from '../../datos/contenido'
 
 export default function PieDePagina() {
@@ -18,9 +19,9 @@ export default function PieDePagina() {
             Sin permanencia, sin letra pequeña y con tu primer día guiado por un
             coach.
           </p>
-          <Link to="/planes" className="boton boton--amarillo">
+          <PressDepth to="/planes" className="boton boton--amarillo">
             Empieza mi semana gratis
-          </Link>
+          </PressDepth>
         </div>
       </div>
 
@@ -95,9 +96,12 @@ export default function PieDePagina() {
               placeholder="tu@email.com"
               aria-label="Tu correo electrónico"
             />
-            <button type="submit" className="boton boton--primario boton--pequeno">
+            <PressDepth
+              type="submit"
+              className="boton boton--primario boton--pequeno"
+            >
               Suscribirme
-            </button>
+            </PressDepth>
           </form>
         </div>
       </div>

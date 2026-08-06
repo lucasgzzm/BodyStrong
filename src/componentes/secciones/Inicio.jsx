@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { estadisticasInicio } from '../../datos/contenido'
 
 const imagenInicio =
@@ -28,12 +28,18 @@ export default function Inicio() {
           </p>
 
           <div className="inicio__llamada">
-            <Link to="/planes" className="boton boton--primario boton--grande">
+            <PressDepth
+              to="/planes"
+              className="boton boton--primario boton--grande"
+            >
               Empieza mi semana gratis
-            </Link>
-            <Link to="/clases" className="boton boton--fantasma-claro boton--grande">
+            </PressDepth>
+            <PressDepth
+              to="/clases"
+              className="boton boton--fantasma-claro boton--grande"
+            >
               Ver clases
-            </Link>
+            </PressDepth>
           </div>
 
           <ul className="inicio__confianza">

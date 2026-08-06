@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { galeria } from '../../datos/contenido'
 
 export default function Galeria() {
@@ -15,9 +15,9 @@ export default function Galeria() {
               detalle. Pásate y compruébalo en persona.
             </p>
           </div>
-          <Link to="/contacto" className="boton boton--primario">
+          <PressDepth to="/contacto" className="boton boton--primario">
             Reserva tu visita
-          </Link>
+          </PressDepth>
         </Aparecer>
 
         <div className="galeria__masonica">

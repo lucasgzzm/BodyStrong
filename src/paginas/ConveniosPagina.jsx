@@ -1,8 +1,8 @@
 import CabeceraPagina from '../componentes/ui/CabeceraPagina'
 import Aparecer from '../componentes/ui/Aparecer'
 import Icono from '../componentes/ui/Icono'
+import PressDepth from '../componentes/ui/PressDepth'
 import { convenios } from '../datos/contenido'
-import { Link } from 'react-router-dom'
 
 export default function ConveniosPagina() {
   return (
@@ -67,9 +67,9 @@ export default function ConveniosPagina() {
               Cuéntanos cuántas personas sois y te preparamos una propuesta con
               condiciones especiales.
             </p>
-            <Link to="/contacto" className="boton boton--primario">
+            <PressDepth to="/contacto" className="boton boton--primario">
               Hablemos de tu convenio
-            </Link>
+            </PressDepth>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import Icono from '../ui/Icono'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { planes } from '../../datos/contenido'
 import { seleccionarPlanPendiente } from '../../datos/almacen'
 
@@ -95,7 +95,7 @@ export default function Planes({ cabecera = true }) {
                   ))}
                 </ul>
 
-                <Link
+                <PressDepth
                   to="/cuenta"
                   className={`boton ${
                     plan.destacado ? 'boton--primario' : 'boton--fantasma-claro'
@@ -103,7 +103,7 @@ export default function Planes({ cabecera = true }) {
                   onClick={() => seleccionarPlanPendiente(plan)}
                 >
                   {plan.llamado}
-                </Link>
+                </PressDepth>
               </Aparecer>
             )
           })}

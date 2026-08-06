@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import Aparecer from '../ui/Aparecer'
+import PressDepth from '../ui/PressDepth'
 import { planes } from '../../datos/contenido'
 
 function formatearPrecio(valor) {
@@ -34,9 +34,9 @@ export default function ResumenPlanes() {
         </Aparecer>
 
         <Aparecer retraso={160}>
-          <Link to="/planes" className="boton boton--amarillo">
+          <PressDepth to="/planes" className="boton boton--amarillo">
             Ver planes y precios
-          </Link>
+          </PressDepth>
         </Aparecer>
       </div>
     </section>
