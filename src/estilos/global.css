@@ -252,28 +252,28 @@ main > * + * {
 }
 
 .boton--fantasma {
-  background: transparent;
+  background: var(--amarillo);
   color: var(--tinta);
-  border-color: rgba(25, 20, 16, 0.28);
+  border-color: transparent;
 }
 
 .boton--fantasma:hover {
-  background: var(--tinta);
-  color: var(--crema);
-  border-color: var(--tinta);
+  background: #ffd233;
+  color: var(--tinta);
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
 .boton--fantasma-claro {
-  background: transparent;
-  color: var(--blanco);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--amarillo);
+  color: var(--tinta);
+  border-color: transparent;
 }
 
 .boton--fantasma-claro:hover {
-  background: var(--blanco);
+  background: #ffd233;
   color: var(--tinta);
-  border-color: var(--blanco);
+  border-color: transparent;
 }
 
 .boton--grande {
@@ -2728,7 +2728,7 @@ main > * + * {
 }
 
 .cuenta-tabs__boton--activo {
-  background: var(--blanco);
+  background: var(--amarillo);
   color: var(--tinta);
   box-shadow: 0 2px 8px rgba(25, 20, 16, 0.1);
 }
@@ -2896,9 +2896,9 @@ main > * + * {
   align-items: center;
   justify-content: center;
   height: 48px;
-  border: 1px solid var(--linea);
+  border: 1.5px solid transparent;
   border-radius: 10px;
-  background: var(--blanco);
+  background: var(--amarillo);
   color: var(--tinta);
   cursor: pointer;
   transition:
@@ -2918,8 +2918,8 @@ main > * + * {
 }
 
 .cuenta-redes__boton:hover {
-  background: var(--crema-2);
-  border-color: var(--linea);
+  background: #ffd233;
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
